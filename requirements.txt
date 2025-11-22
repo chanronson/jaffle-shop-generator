@@ -8,7 +8,7 @@ markdown-it-py==3.0.0
     # via rich
 mdurl==0.1.2
     # via markdown-it-py
-numpy==1.26.4
+numpy==1.22.4
     # via -r requirements.in
 pygments==2.17.2
     # via rich
