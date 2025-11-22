@@ -47,7 +47,7 @@ jobs:
           uv pip install -r requirements.txt
           uv pip install -r dev-requirements.txt
       - name: Test with pytest (fast tests only)
-        run: pytest -m "not slow"
+        run: python -m pytest -m "not slow"
       - name: Upload coverage reports to Codecov (Python 3.10 only)
         if: matrix.python-version == '3.10'
         uses: codecov/codecov-action@v4
