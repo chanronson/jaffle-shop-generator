@@ -21,13 +21,13 @@ jobs:
           uv pip install -r requirements.txt --system
           uv pip install -r dev-requirements.txt --system
       - name: Check code formatting with black
-        run: black --check --diff .
+        run: python -m black --check --diff .
       - name: Check import sorting with isort
-        run: isort --check-only --diff .
+        run: python -m isort --check-only --diff .
       - name: Type checking with mypy
-        run: mypy jafgen/
+        run: python -m mypy jafgen/
       - name: Lint with ruff
-        run: ruff check
+        run: python -m ruff check
 
   test:
     runs-on: ubuntu-latest
