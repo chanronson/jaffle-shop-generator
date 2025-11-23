@@ -1,6 +1,5 @@
 """Integration tests for DataGenerator with LinkResolver."""
 
-
 import pytest
 
 from jafgen.generation.data_generator import DataGenerator

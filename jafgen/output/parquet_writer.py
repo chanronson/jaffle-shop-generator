@@ -60,7 +60,7 @@ class ParquetWriter(OutputWriter):
                     flattened_records = [
                         self._flatten_record(record) for record in records
                     ]
-                    
+
                     # Create a schema where all fields are strings
                     fields = [(key, pa.string()) for key in flattened_records[0].keys()]
                     schema = pa.schema(fields)
@@ -82,6 +82,7 @@ class ParquetWriter(OutputWriter):
                 flattened[key] = None
             elif isinstance(value, (list, dict)):
                 import json
+
                 flattened[key] = json.dumps(value)
             else:
                 flattened[key] = str(value)
