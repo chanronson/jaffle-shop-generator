@@ -1,6 +1,7 @@
-from pathlib import Path
-from jafgen.simulation import Simulation
 import csv
+from pathlib import Path
+
+from jafgen.simulation import Simulation
 
 
 class TestSimulation:
