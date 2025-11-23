@@ -7,7 +7,7 @@ name = "jafgen"
 version = "0.4.14"
 authors = [{ name = "gwenwindflower", email = "gwenwindflower@gmail.com" }]
 dependencies = [
-    "numpy<1.23.0", 
+    "numpy>=1.26.0,<2.0.0", 
     "Faker", 
     "typer",
     "mimesis>=11.0.0",
