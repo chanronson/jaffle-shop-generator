@@ -7,11 +7,7 @@ import pytest
 from jafgen.generation.exceptions import LinkResolutionError
 from jafgen.generation.link_resolver import LinkResolver
 from jafgen.generation.models import DependencyGraph
-from jafgen.schema.models import (
-    AttributeConfig,
-    EntityConfig,
-    SystemSchema,
-)
+from jafgen.schema.models import AttributeConfig, EntityConfig, SystemSchema
 
 
 class TestLinkResolver:
@@ -223,7 +219,7 @@ class TestLinkResolver:
         """Test getting generation order from dependency graph."""
         schema = SystemSchema(
             name="app",
-            version="1.0",
+            version="1.o",
             entities={
                 "users": EntityConfig(
                     name="users",
