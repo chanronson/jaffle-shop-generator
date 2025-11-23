@@ -10,22 +10,19 @@ jobs:
   code-quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Install dependencies
         run: |
-          python3 -m pip install uv
-          uv venv
-          source .venv/bin/activate
-          uv pip install -r requirements.txt
-          uv pip install -r dev-requirements.txt
+          python -m venv .venv
+          .venv/bin/pip install -r requirements.txt
+          .venv/bin/pip install -r dev-requirements.txt
       - name: Check code formatting with black
-        run: source .venv/bin/activate && python -m black --check --diff .
+        run: .venv/bin/black --check --diff .
       - name: Check import sorting with isort
-        run: source .venv/bin/activate && python -m isort --check-only --diff .
+        run: .venv/bin/isort --check-only --diff .
       - name: Type checking with mypy
-        run: source .venv/bin/activate && python -m mypy jafgen/
+        run: .venv/bin/mypy jafgen/
       - name: Lint with ruff
-        run: source .venv/bin/activate && python -m ruff check
+        run: .venv/bin/ruff check
 
   test:
     runs-on: ubuntu-latest
@@ -41,13 +38,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          python3 -m pip install uv
-          uv venv
-          source .venv/bin/activate
-          uv pip install -r requirements.txt
-          uv pip install -r dev-requirements.txt
+          python -m venv .venv
+          .venv/bin/pip install -r requirements.txt
+          .venv/bin/pip install -r dev-requirements.txt
       - name: Test with pytest (fast tests only)
-        run: source .venv/bin/activate && python -m pytest -m "not slow"
+        run: .venv/bin/pytest -m "not slow"
       - name: Upload coverage reports to Codecov (Python 3.10 only)
         if: matrix.python-version == '3.10'
         uses: codecov/codecov-action@v4
