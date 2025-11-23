@@ -258,7 +258,7 @@ class TestParquetWriter:
         assert row["int_val"] == 42
         assert row["float_val"] == 3.14
         assert bool(row["bool_val"]) is True
-    
+
     def test_write_with_mixed_column_types_triggers_flattening(self, tmp_path: Path):
         """Test that data with mixed types in a column triggers the flattening logic."""
         writer = ParquetWriter()

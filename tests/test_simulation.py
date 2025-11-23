@@ -2,6 +2,7 @@ from pathlib import Path
 from jafgen.simulation import Simulation
 import csv
 
+
 class TestSimulation:
     def test_simulation_run(self, tmp_path: Path):
         # Create a simulation that runs for 1 year and 1 day
@@ -13,7 +14,7 @@ class TestSimulation:
         # Check that the simulation has produced some data
         assert len(simulation.orders) > 0
         assert len(simulation.customers) > 0
-        
+
         # Save the results
         simulation.save_results()
 

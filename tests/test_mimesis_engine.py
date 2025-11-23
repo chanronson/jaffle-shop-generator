@@ -1,6 +1,5 @@
 """Tests for MimesisEngine implementation."""
 
-
 import pytest
 
 from jafgen.generation.exceptions import AttributeGenerationError, UniqueConstraintError

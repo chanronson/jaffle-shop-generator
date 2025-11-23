@@ -1,6 +1,5 @@
 """Tests for schema constants."""
 
-
 from jafgen.schema.constants import (
     REQUIRED_ATTRIBUTE_FIELDS,
     REQUIRED_ENTITY_FIELDS,
