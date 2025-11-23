@@ -19,13 +19,13 @@ jobs:
           uv pip install -r requirements.txt
           uv pip install -r dev-requirements.txt
       - name: Check code formatting with black
-        run: python -m black --check --diff .
+        run: source .venv/bin/activate && python -m black --check --diff .
       - name: Check import sorting with isort
-        run: python -m isort --check-only --diff .
+        run: source .venv/bin/activate && python -m isort --check-only --diff .
       - name: Type checking with mypy
-        run: python -m mypy jafgen/
+        run: source .venv/bin/activate && python -m mypy jafgen/
       - name: Lint with ruff
-        run: python -m ruff check
+        run: source .venv/bin/activate && python -m ruff check
 
   test:
     runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
           uv pip install -r requirements.txt
           uv pip install -r dev-requirements.txt
       - name: Test with pytest (fast tests only)
-        run: python -m pytest -m "not slow"
+        run: source .venv/bin/activate && python -m pytest -m "not slow"
       - name: Upload coverage reports to Codecov (Python 3.10 only)
         if: matrix.python-version == '3.10'
         uses: codecov/codecov-action@v4
