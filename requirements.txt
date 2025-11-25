@@ -14,6 +14,8 @@ pygments==2.17.2
     # via rich
 python-dateutil==2.9.0.post0
     # via faker
+pyyaml==6.0.3
+    # via -r requirements.in
 rich==13.7.1
     # via typer
 shellingham==1.5.4
