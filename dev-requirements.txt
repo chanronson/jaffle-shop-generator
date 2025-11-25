@@ -16,10 +16,14 @@ mypy-extensions==1.1.0
     #   mypy
 nodeenv==1.8.0
     # via pyright
+numpy==2.3.5
+    # via pandas-stubs
 packaging==24.0
     # via
     #   black
     #   pytest
+pandas-stubs==2.3.2.250926
+    # via -r dev-requirements.in
 pathspec==0.12.1
     # via black
 platformdirs==4.5.0
@@ -38,5 +42,7 @@ setuptools==69.0.3
     # via
     #   -r dev-requirements.in
     #   nodeenv
+types-pytz==2025.2.0.20251108
+    # via pandas-stubs
 typing-extensions==4.15.0
     # via mypy

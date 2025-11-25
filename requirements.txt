@@ -2,6 +2,8 @@
 #    uv pip compile requirements.in -o requirements.txt
 click==8.1.7
     # via typer
+duckdb==1.4.2
+    # via -r requirements.in
 faker==24.7.1
     # via -r requirements.in
 markdown-it-py==3.0.0
@@ -11,11 +13,21 @@ mdurl==0.1.2
 mimesis==18.0.0
     # via -r requirements.in
 numpy==1.26.4
+    # via
+    #   -r requirements.in
+    #   pandas
+pandas==2.3.3
+    # via -r requirements.in
+pyarrow==22.0.0
     # via -r requirements.in
 pygments==2.17.2
     # via rich
 python-dateutil==2.9.0.post0
-    # via faker
+    # via
+    #   faker
+    #   pandas
+pytz==2025.2
+    # via pandas
 pyyaml==6.0.3
     # via -r requirements.in
 rich==13.7.1
@@ -28,3 +40,5 @@ typer==0.12.3
     # via -r requirements.in
 typing-extensions==4.11.0
     # via typer
+tzdata==2025.2
+    # via pandas
