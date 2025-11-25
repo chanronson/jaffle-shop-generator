@@ -20,8 +20,6 @@ packaging==24.0
     # via
     #   black
     #   pytest
-pandas-stubs==1.5.3.230321
-    # via -r dev-requirements.in
 pathspec==0.12.1
     # via black
 platformdirs==4.5.0
@@ -40,7 +38,5 @@ setuptools==69.0.3
     # via
     #   -r dev-requirements.in
     #   nodeenv
-types-pytz==2025.2.0.20251108
-    # via pandas-stubs
 typing-extensions==4.15.0
     # via mypy
