@@ -5,10 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from jafgen.schema import (
-    CircularDependencyError,
-    SchemaDiscoveryEngine,
-)
+from jafgen.schema import CircularDependencyError, SchemaDiscoveryEngine
 from jafgen.schema.models import (
     AttributeConfig,
     EntityConfig,

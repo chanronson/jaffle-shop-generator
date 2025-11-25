@@ -1,4 +1,4 @@
-"""Concrete implementation of DataGenerator for entity creation."""
+"Concrete implementation of DataGenerator for entity creation."
 
 from datetime import datetime
 from typing import Any, Dict, List, Optional
@@ -6,10 +6,7 @@ from typing import Any, Dict, List, Optional
 from ..schema.models import EntityConfig, SystemSchema
 from .exceptions import GenerationError
 from .interfaces import DataGenerator as DataGeneratorInterface
-from .interfaces import (
-    LinkResolver,
-    MimesisEngine,
-)
+from .interfaces import LinkResolver, MimesisEngine
 from .models import GeneratedSystem, GenerationMetadata
 
 
@@ -89,7 +86,8 @@ class DataGenerator(DataGeneratorInterface):
             ) from e
 
     def generate_multiple_systems(
-        self, schemas: List[SystemSchema]
+        self,
+        schemas: List[SystemSchema]
     ) -> List[GeneratedSystem]:
         """Generate data for multiple system schemas with cross-schema dependencies.
 

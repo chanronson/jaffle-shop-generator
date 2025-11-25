@@ -1,3 +1,8 @@
-numpy
-Faker
-typer>=0.20.0
+numpy>=1.26.0,<2.0.0
+Faker==24.7.1
+typer==0.12.3
+PyYAML>=6.0
+mimesis>=13.0.0
+duckdb>=0.10.0
+pandas>=2.0.0
+pyarrow>=15.0.0

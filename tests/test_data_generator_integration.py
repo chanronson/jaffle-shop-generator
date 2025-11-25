@@ -1,17 +1,12 @@
 """Integration tests for DataGenerator with LinkResolver."""
 
-
 import pytest
 
 from jafgen.generation.data_generator import DataGenerator
 from jafgen.generation.exceptions import GenerationError
 from jafgen.generation.link_resolver import LinkResolver
 from jafgen.generation.mimesis_engine import MimesisEngine
-from jafgen.schema.models import (
-    AttributeConfig,
-    EntityConfig,
-    SystemSchema,
-)
+from jafgen.schema.models import AttributeConfig, EntityConfig, SystemSchema
 
 
 class TestDataGeneratorLinkIntegration:

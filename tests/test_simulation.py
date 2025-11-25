@@ -1,6 +1,8 @@
-from pathlib import Path
-from jafgen.simulation import Simulation
 import csv
+from pathlib import Path
+
+from jafgen.simulation import Simulation
+
 
 class TestSimulation:
     def test_simulation_run(self, tmp_path: Path):
@@ -13,7 +15,7 @@ class TestSimulation:
         # Check that the simulation has produced some data
         assert len(simulation.orders) > 0
         assert len(simulation.customers) > 0
-        
+
         # Save the results
         simulation.save_results()
 
